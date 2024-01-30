@@ -33,6 +33,7 @@ body {
   h1 {
     color: #333;
     white-space: nowrap;
+    overflow: hidden;
     font-family:"DejaVu Sans","DejaVu Sans Mac Name","DejaVu Sans Unix Name","Times New Roman";
     animation: moveLeftToRight 12s linear infinite; /* Adjust the animation duration as needed */
   }

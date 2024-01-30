@@ -23,8 +23,8 @@ body {
   }
   
   #photo {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     border-radius: 10px;
     margin-top: 20px;
     cursor: pointer;

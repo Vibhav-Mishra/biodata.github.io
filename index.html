@@ -13,10 +13,15 @@
   <header>
     <h1>ॐ श्री गणेशाय नम:</h1>
     <div id="namePhotoContainer">
-      <img id="photo" src="img/user_photo.jpg" alt="Your Photo" onclick="openFullscreen()">
-      <h2>VIBHAV KUMAR MISHRA</h2>
+      <img id="photo" src="img/user_photo.jpg" alt="Your Photo" onclick="openFullscreen(this)">
+      <img id="userPhoto" src="img/user_photo1.jpeg" alt="Your Photo1" onclick="openFullscreen(this)">
     </div>
+    <h2>VIBHAV KUMAR MISHRA</h2>
+
   </header>
+  <div id="fullscreenContainer" class="fullscreen" onclick="closeFullscreen()">
+    <img id="fullscreenImage" src="" alt="Fullscreen Image">
+  </div>
 
   <section>
     <h2>Details</h2>
@@ -56,10 +61,10 @@
       <span>Siblings:</span>
       <span>3 Sisters ( 2 married )</span>
     </div>
-<!--     <div class="details">
+    <div class="details">
       <span>Mama Ji Details:</span>
       <span>DILIP KUMAR DUBEY, Maharajganj, Bhadohi (BUSINESS OWNER)</span>
-    </div> -->
+    </div>
   </section>
 
   <footer>
@@ -70,6 +75,7 @@
     <img src="img/user_photo.jpg" alt="Your Photo">
     <div class="back-button">Back</div>
   </div>
+  <script src="script.js"></script>
 
 </body>
 </html>

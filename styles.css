@@ -24,15 +24,15 @@ body {
   }
   
   #photo {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 10px;
     margin-top: 20px;
     cursor: pointer;
   }
 
     #userPhoto {
-      max-width: 300px;
+      max-width: 200px;
       max-height: 300px;
       border-radius: 10px;
       margin-top: 20px; /* Adjust margin as needed */

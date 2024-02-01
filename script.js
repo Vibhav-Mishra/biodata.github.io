@@ -1,7 +1,12 @@
-function openFullscreen() {
-    document.getElementById('fullscreen').style.display = 'flex';
-  }
+function openFullscreen(element) {
+  var fullscreenContainer = document.getElementById('fullscreenContainer');
+  var fullscreenImage = document.getElementById('fullscreenImage');
 
-  function closeFullscreen() {
-    document.getElementById('fullscreen').style.display = 'none';
-  }
+  fullscreenImage.src = element.src;
+  fullscreenContainer.style.display = 'flex';
+}
+
+function closeFullscreen() {
+  var fullscreenContainer = document.getElementById('fullscreenContainer');
+  fullscreenContainer.style.display = 'none';
+}

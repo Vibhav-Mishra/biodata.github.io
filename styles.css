@@ -16,31 +16,41 @@ body {
   }
   
   #namePhotoContainer {
+    gap: 10%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
   
   #photo {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 300px;
+    max-height: 300px;
     border-radius: 10px;
     margin-top: 20px;
     cursor: pointer;
+  }
+
+    #userPhoto {
+      max-width: 300px;
+      max-height: 300px;
+      border-radius: 10px;
+      margin-top: 20px; /* Adjust margin as needed */
+      cursor: pointer;
+    
   }
   
   h1 {
     color: #333;
     white-space: nowrap;
-    overflow: hidden;
     font-family:"DejaVu Sans","DejaVu Sans Mac Name","DejaVu Sans Unix Name","Times New Roman";
     animation: moveLeftToRight 12s linear infinite; /* Adjust the animation duration as needed */
+    overflow: hidden;
   }
   
   h2 {
-    font-weight: 900;
     font-size: xx-large;
+    font-weight:900;
     color: #333;
     margin-top: 30px;
     margin-bottom: 0px;

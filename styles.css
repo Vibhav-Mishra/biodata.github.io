@@ -1,4 +1,3 @@
-/* General styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -35,7 +34,7 @@ header {
 h1 {
   color: #333;
   white-space: nowrap;
-  font-family:"DejaVu Sans","Times New Roman";
+  font-family: "DejaVu Sans", "Times New Roman";
   animation: moveLeftToRight 12s linear infinite;
   overflow: hidden;
 }
@@ -129,6 +128,7 @@ footer {
   width: 80%;
 }
 
+/* Button Styles */
 button {
   padding: 10px 20px;
   margin: 10px;
@@ -156,7 +156,6 @@ button:hover {
   padding: 10px 15px;
   font-size: 16px;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .hindi {
@@ -173,4 +172,29 @@ button:hover {
 @keyframes moveLeftToRight {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .popup-content {
+    width: 90%; /* Make the popup wider on smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .language-btn {
+    font-size: 14px; /* Adjust font size for buttons */
+    padding: 8px 12px; /* Adjust padding for buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    width: 95%; /* Make the popup even wider on very small screens */
+    padding: 15px; /* Further adjust padding */
+  }
+
+  .language-btn {
+    font-size: 12px; /* Further reduce button font size */
+    padding: 6px 10px; /* Further adjust padding */
+  }
 }

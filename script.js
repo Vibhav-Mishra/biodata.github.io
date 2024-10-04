@@ -34,7 +34,7 @@ const translations = {
     companyLabel: "कंपनी और स्थान:",
     companyValue: "रॉमबुज़ डिज़ाइन प्राइवेट लिमिटेड - बैंगलोर (घर से काम)",
     dobLabel: "जन्म तिथि:",
-    dobValue: "30/05/1997",
+    dobValue: "30/05/1997 - 07:56 PM (रात)",
     addressLabel: "पता:",
     addressValue: "समाहन मेजारोड प्रयागराज",
     educationLabel: "शिक्षा:",

@@ -186,7 +186,7 @@ button:hover {
 
 @media (max-width: 480px) {
   .popup-content {
-    width: 50%; /* Set width to 25% for mobile phones */
+    width: 40%; /* Set width to 25% for mobile phones */
     max-width: none; /* Remove max-width to allow full 25% */
     padding: 15px; /* Adjust padding for smaller screens */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */

@@ -178,14 +178,16 @@ button:hover {
 /* Media Queries */
 @media (max-width: 568px) {
   .popup-content {
-    width: 90%; /* Make it narrower on smaller screens */
+    justify-content: center;
+    width: 70%; /* Make it narrower on smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
   }
 }
 
 @media (max-width: 280px) {
   .popup-content {
-    width: 85%; /* Slightly wider on very small screens */
+    justify-content: center;
+    width: 75%; /* Slightly wider on very small screens */
     padding: 15px; /* Further adjust padding */
   }
 

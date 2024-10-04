@@ -1,58 +1,87 @@
-// Function to open the fullscreen image
-function openFullscreen(element) {
-  var fullscreenContainer = document.getElementById('fullscreenContainer');
-  var fullscreenImage = document.getElementById('fullscreenImage');
-
-  fullscreenImage.src = element.src;
-  fullscreenContainer.style.display = 'flex';
-}
-
-// Function to close fullscreen image
-function closeFullscreen() {
-  var fullscreenContainer = document.getElementById('fullscreenContainer');
-  fullscreenContainer.style.display = 'none';
-}
-
-// Set language and hide popup
-function setLanguage(language) {
-  const languagePopup = document.getElementById('languagePopup');
-  const mainContent = document.getElementById('mainContent');
-  
-  // Show content after language selection
-  languagePopup.style.display = 'none';
-  mainContent.style.filter = 'none';
-
-  if (language === 'en') {
-    setEnglishText();
-  } else if (language === 'hi') {
-    setHindiText();
+const translations = {
+  en: {
+    headerTitle: "ॐ श्री गणेशाय नम:",
+    name: "VIBHAV KUMAR MISHRA",
+    detailsTitle: "Details",
+    occupationLabel: "Occupation:",
+    occupationValue: "SOFTWARE ENGINEER",
+    companyLabel: "Company and Location:",
+    companyValue: "RHOMBUZ DESIGN PVT LTD - BANGALORE(WORK FROM HOME)",
+    dobLabel: "DOB:",
+    dobValue: "30/05/1997",
+    addressLabel: "Address:",
+    addressValue: "SAMAHAN MEJAROAD PRAYAGRAJ",
+    educationLabel: "Education:",
+    educationValue: "MBA-IT",
+    fatherNameLabel: "Father's Name:",
+    fatherNameValue: "AKHILESH KUMAR MISHRA",
+    fatherOccupationLabel: "Father's Occupation:",
+    fatherOccupationValue: "GOV JOB (POST OFFICE)",
+    motherNameLabel: "Mother's Name:",
+    motherNameValue: "SUNITA MISHRA",
+    contactDetailsLabel: "Contact Details:",
+    contactDetailsValue: "8707243312",
+    siblingsLabel: "Siblings:",
+    siblingsValue: "3 Sisters (2 married)",
+    footerTitle: "राधे राधे धन्यवाद"
+  },
+  hi: {
+    headerTitle: "ॐ श्री गणेशाय नम:",
+    name: "विभव कुमार मिश्रा",
+    detailsTitle: "विवरण",
+    occupationLabel: "पेशा:",
+    occupationValue: "सॉफ्टवेयर इंजीनियर",
+    companyLabel: "कंपनी और स्थान:",
+    companyValue: "रॉमबुज़ डिज़ाइन प्राइवेट लिमिटेड - बैंगलोर (घर से काम)",
+    dobLabel: "जन्म तिथि:",
+    dobValue: "30/05/1997",
+    addressLabel: "पता:",
+    addressValue: "समाहन मेजारोड प्रयागराज",
+    educationLabel: "शिक्षा:",
+    educationValue: "एमबीए-आईटी",
+    fatherNameLabel: "पिता का नाम:",
+    fatherNameValue: "अखिलेश कुमार मिश्रा",
+    fatherOccupationLabel: "पिता का व्यवसाय:",
+    fatherOccupationValue: "सरकारी नौकरी (डाकघर)",
+    motherNameLabel: "माता का नाम:",
+    motherNameValue: "सुनीता मिश्रा",
+    contactDetailsLabel: "संपर्क विवरण:",
+    contactDetailsValue: "8707243312",
+    siblingsLabel: "भाई-बहन:",
+    siblingsValue: "3 बहनें (2 शादीशुदा)",
+    footerTitle: "राधे राधे धन्यवाद"
   }
-}
+};
 
-// Default language setup on page load
-window.onload = function() {
-  const languagePopup = document.getElementById('languagePopup');
-  const mainContent = document.getElementById('mainContent');
+let currentLanguage = "en";
 
-  // Blur the main content until language is selected
-  mainContent.style.filter = 'blur(5px)';
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "hi" : "en";
+  document.getElementById("languageToggle").innerText = currentLanguage === "en" ? "View in Hindi" : "View in English";
 
-  // Show the language selection popup
-  languagePopup.style.display = 'flex';
-}
-
-// Set content for English
-function setEnglishText() {
-  document.getElementById('detailsHeader').innerText = 'Details';
-  document.getElementById('occupationLabel').innerText = 'Occupation:';
-  document.getElementById('dobLabel').innerText = 'DOB:';
-  document.getElementById('dobValue').innerText = '30/05/1997 - 07:56 PM (night)';
-}
-
-// Set content for Hindi
-function setHindiText() {
-  document.getElementById('detailsHeader').innerText = 'विवरण';
-  document.getElementById('occupationLabel').innerText = 'व्यवसाय:';
-  document.getElementById('dobLabel').innerText = 'जन्म तिथि:';
-  document.getElementById('dobValue').innerText = '30/05/1997 - 07:56 PM (रात)';
+  const content = translations[currentLanguage];
+  document.getElementById("header-title").innerText = content.headerTitle;
+  document.getElementById("name").innerText = content.name;
+  document.getElementById("details-title").innerText = content.detailsTitle;
+  document.getElementById("occupation-label").innerText = content.occupationLabel;
+  document.getElementById("occupation-value").innerText = content.occupationValue;
+  document.getElementById("company-label").innerText = content.companyLabel;
+  document.getElementById("company-value").innerText = content.companyValue;
+  document.getElementById("dob-label").innerText = content.dobLabel;
+  document.getElementById("dob-value").innerText = content.dobValue;
+  document.getElementById("address-label").innerText = content.addressLabel;
+  document.getElementById("address-value").innerText = content.addressValue;
+  document.getElementById("education-label").innerText = content.educationLabel;
+  document.getElementById("education-value").innerText = content.educationValue;
+  document.getElementById("father-name-label").innerText = content.fatherNameLabel;
+  document.getElementById("father-name-value").innerText = content.fatherNameValue;
+  document.getElementById("father-occupation-label").innerText = content.fatherOccupationLabel;
+  document.getElementById("father-occupation-value").innerText = content.fatherOccupationValue;
+  document.getElementById("mother-name-label").innerText = content.motherNameLabel;
+  document.getElementById("mother-name-value").innerText = content.motherNameValue;
+  document.getElementById("contact-details-label").innerText = content.contactDetailsLabel;
+  document.getElementById("contact-details-value").innerText = content.contactDetailsValue;
+  document.getElementById("siblings-label").innerText = content.siblingsLabel;
+  document.getElementById("siblings-value").innerText = content.siblingsValue;
+  document.getElementById("footer-title").innerText = content.footerTitle;
 }

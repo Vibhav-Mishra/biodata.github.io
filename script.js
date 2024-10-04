@@ -55,7 +55,14 @@ const translations = {
 
 let currentLanguage = "en";
 
-// Set language and hide popup
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "hi" : "en";
+  document.getElementById("languageToggle").innerText = currentLanguage === "en" ? "View in Hindi" : "View in English";
+
+  const content = translations[currentLanguage];
+  updateContent(content);
+}
+
 function setLanguage(language) {
   const languagePopup = document.getElementById('languagePopup');
   const mainContent = document.getElementById('mainContent');
@@ -64,57 +71,49 @@ function setLanguage(language) {
   languagePopup.style.display = 'none';
   mainContent.style.filter = 'none';
 
-  currentLanguage = language;
-  updateContent();
+  if (language === 'en') {
+    currentLanguage = 'en';
+    updateContent(translations.en);
+  } else if (language === 'hi') {
+    currentLanguage = 'hi';
+    updateContent(translations.hi);
+  }
 }
 
-// Function to toggle language
-function toggleLanguage() {
-  currentLanguage = currentLanguage === "en" ? "hi" : "en";
-  document.getElementById("languageToggle").innerText = currentLanguage === "en" ? "View in Hindi" : "View in English";
-  updateContent();
+// Update content based on language
+function updateContent(content) {
+  document.getElementById('header-title').innerText = content.headerTitle;
+  document.getElementById('name').innerText = content.name;
+  document.getElementById('details-title').innerText = content.detailsTitle;
+  document.getElementById('occupation-label').innerText = content.occupationLabel;
+  document.getElementById('occupation-value').innerText = content.occupationValue;
+  document.getElementById('company-label').innerText = content.companyLabel;
+  document.getElementById('company-value').innerText = content.companyValue;
+  document.getElementById('dob-label').innerText = content.dobLabel;
+  document.getElementById('dob-value').innerText = content.dobValue;
+  document.getElementById('address-label').innerText = content.addressLabel;
+  document.getElementById('address-value').innerText = content.addressValue;
+  document.getElementById('education-label').innerText = content.educationLabel;
+  document.getElementById('education-value').innerText = content.educationValue;
+  document.getElementById('father-name-label').innerText = content.fatherNameLabel;
+  document.getElementById('father-name-value').innerText = content.fatherNameValue;
+  document.getElementById('father-occupation-label').innerText = content.fatherOccupationLabel;
+  document.getElementById('father-occupation-value').innerText = content.fatherOccupationValue;
+  document.getElementById('mother-name-label').innerText = content.motherNameLabel;
+  document.getElementById('mother-name-value').innerText = content.motherNameValue;
+  document.getElementById('contact-details-label').innerText = content.contactDetailsLabel;
+  document.getElementById('contact-details-value').innerText = content.contactDetailsValue;
+  document.getElementById('siblings-label').innerText = content.siblingsLabel;
+  document.getElementById('siblings-value').innerText = content.siblingsValue;
+  document.getElementById('footer-title').innerText = content.footerTitle;
 }
 
-// Update the content based on the current language
-function updateContent() {
-  const content = translations[currentLanguage];
-  document.getElementById("header-title").innerText = content.headerTitle;
-  document.getElementById("name").innerText = content.name;
-  document.getElementById("details-title").innerText = content.detailsTitle;
-  document.getElementById("occupation-label").innerText = content.occupationLabel;
-  document.getElementById("occupation-value").innerText = content.occupationValue;
-  document.getElementById("company-label").innerText = content.companyLabel;
-  document.getElementById("company-value").innerText = content.companyValue;
-  document.getElementById("dob-label").innerText = content.dobLabel;
-  document.getElementById("dob-value").innerText = content.dobValue;
-  document.getElementById("address-label").innerText = content.addressLabel;
-  document.getElementById("address-value").innerText = content.addressValue;
-  document.getElementById("education-label").innerText = content.educationLabel;
-  document.getElementById("education-value").innerText = content.educationValue;
-  document.getElementById("father-name-label").innerText = content.fatherNameLabel;
-  document.getElementById("father-name-value").innerText = content.fatherNameValue;
-  document.getElementById("father-occupation-label").innerText = content.fatherOccupationLabel;
-  document.getElementById("father-occupation-value").innerText = content.fatherOccupationValue;
-  document.getElementById("mother-name-label").innerText = content.motherNameLabel;
-  document.getElementById("mother-name-value").innerText = content.motherNameValue;
-  document.getElementById("contact-details-label").innerText = content.contactDetailsLabel;
-  document.getElementById("contact-details-value").innerText = content.contactDetailsValue;
-  document.getElementById("siblings-label").innerText = content.siblingsLabel;
-  document.getElementById("siblings-value").innerText = content.siblingsValue;
-  document.getElementById("footer-title").innerText = content.footerTitle;
-}
-
-// Default language setup on page load
+// Automatically open the language popup on page load
 window.onload = function() {
   const languagePopup = document.getElementById('languagePopup');
   const mainContent = document.getElementById('mainContent');
 
-  // Blur the main content until language is selected
-  mainContent.style.filter = 'blur(5px)';
-
-  // Show the language selection popup
+  // Show popup and blur content
   languagePopup.style.display = 'flex';
-
-  // Initialize content
-  updateContent();
-}
+  mainContent.style.filter = 'blur(5px)';
+};

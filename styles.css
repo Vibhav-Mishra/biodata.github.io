@@ -125,7 +125,7 @@ footer {
   padding: 30px;
   text-align: center;
   border-radius: 10px;
-  width: 80%;
+  width: 80%; /* Default width for larger screens */
   max-width: 600px; /* Limit maximum width */
 }
 
@@ -176,19 +176,16 @@ button:hover {
 }
 
 /* Media Queries */
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   .popup-content {
-    justify-content: center;
-    width: 70%; /* Make it narrower on smaller screens */
-    padding: 20px; /* Adjust padding for smaller screens */
+    width: 50%; /* Set width to 50% for tablets */
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 480px) {
   .popup-content {
-    justify-content: center;
-    width: 75%; /* Slightly wider on very small screens */
-    padding: 15px; /* Further adjust padding */
+    width: 25%; /* Set width to 25% for mobile phones */
+    padding: 15px; /* Adjust padding for smaller screens */
   }
 
   .language-btn {

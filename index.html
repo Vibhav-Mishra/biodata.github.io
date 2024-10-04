@@ -6,32 +6,40 @@
   <title>Shree Ganesh Biodata</title>
   <link rel="icon" type="image/x-icon" href="img/logo.png">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header>
+  <div id="languagePopup" class="popup">
+    <div class="popup-content">
+      <h2>Select Language</h2>
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('hi')">Hindi</button>
+    </div>
+  </div>
+
+  <header id="mainContent">
     <h1>ॐ श्री गणेशाय नम:</h1>
     <div id="namePhotoContainer">
       <img id="photo" src="img/user_photo.jpg" alt="Your Photo" onclick="openFullscreen(this)">
       <img id="userPhoto" src="img/user_photo1.jpeg" alt="Your Photo1" onclick="openFullscreen(this)">
     </div>
     <h2>VIBHAV KUMAR MISHRA</h2>
-
   </header>
+
   <div id="fullscreenContainer" class="fullscreen" onclick="closeFullscreen()">
     <img id="fullscreenImage" src="" alt="Fullscreen Image">
   </div>
 
   <section>
-    <h2>Details</h2>
+    <h2 id="detailsHeader">Details</h2>
     <div class="details">
-      <span>Occupation:</span>
-      <span>SOFTWARE ENGINEER</span>
+      <span id="occupationLabel">Occupation:</span>
+      <span id="occupationValue">SOFTWARE ENGINEER</span>
     </div>
     <div class="details">
       <span>Company and Location:</span>
-      <span>RHOMBUZ DESIGN PVT LTD - BANGALORE(WORK FROM HOME)</span>
+      <span id="companyValue">RHOMBUZ DESIGN PVT LTD - BANGALORE(WORK FROM HOME)</span>
     </div>
     <div class="details">
       <span id="dobLabel">DOB:</span>
@@ -70,8 +78,6 @@
   <footer>
     <h1>राधे राधे धन्यवाद</h1>
   </footer>
-
-  <button id="languageToggle" onclick="toggleLanguage()">Hindi</button>
 
   <script src="script.js"></script>
 </body>

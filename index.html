@@ -1,76 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Biodata</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Ganesh Biodata</title>
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="languagePopup">
-        <div class="popup-content">
-            <h2>Select Language</h2>
-            <button onclick="setLanguage('en')">English</button>
-            <button onclick="setLanguage('hi')">हिन्दी</button>
-        </div>
+
+  <div id="languagePopup" class="popup">
+    <div class="popup-content">
+      <h2>Select Language</h2>
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('hi')">Hindi</button>
     </div>
+  </div>
 
-    <div id="mainContent">
-        <div id="header-title">ॐ श्री गणेशाय नम:</div>
-        <div id="name">VIBHAV KUMAR MISHRA</div>
-
-        <!-- Language Toggle Buttons -->
-        <div id="languageToggleContainer">
-            <button id="languageToggle" onclick="toggleLanguage()" style="background-color: #28a745;">View in Hindi</button>
-        </div>
-
-        <h2 id="details-title">Details</h2>
-        <div class="details">
-            <span id="occupation-label">Occupation:</span>
-            <span id="occupation-value">SOFTWARE ENGINEER</span>
-        </div>
-        <div class="details">
-            <span id="company-label">Company and Location:</span>
-            <span id="company-value">RHOMBUZ DESIGN PVT LTD - BANGALORE (WORK FROM HOME)</span>
-        </div>
-        <div class="details">
-            <span id="dob-label">DOB:</span>
-            <span id="dob-value">30/05/1997 - 07:56 PM (night)</span>
-        </div>
-        <div class="details">
-            <span id="address-label">Address:</span>
-            <span id="address-value">SAMAHAN MEJAROAD PRAYAGRAJ</span>
-        </div>
-        <div class="details">
-            <span id="education-label">Education:</span>
-            <span id="education-value">MBA-IT</span>
-        </div>
-        <div class="details">
-            <span id="father-name-label">Father's Name:</span>
-            <span id="father-name-value">AKHILESH KUMAR MISHRA</span>
-        </div>
-        <div class="details">
-            <span id="father-occupation-label">Father's Occupation:</span>
-            <span id="father-occupation-value">GOV JOB (POST OFFICE)</span>
-        </div>
-        <div class="details">
-            <span id="mother-name-label">Mother's Name:</span>
-            <span id="mother-name-value">SUNITA MISHRA</span>
-        </div>
-        <div class="details">
-            <span id="contact-details-label">Contact Details:</span>
-            <span id="contact-details-value">8707243312</span>
-        </div>
-        <div class="details">
-            <span id="siblings-label">Siblings:</span>
-            <span id="siblings-value">3 Sisters (2 married)</span>
-        </div>
+  <header id="mainContent">
+    <h1>ॐ श्री गणेशाय नम:</h1>
+    <div id="namePhotoContainer">
+      <img id="photo" src="img/user_photo.jpg" alt="Your Photo" onclick="openFullscreen(this)">
+      <img id="userPhoto" src="img/user_photo1.jpeg" alt="Your Photo1" onclick="openFullscreen(this)">
     </div>
+    <h2>VIBHAV KUMAR MISHRA</h2>
+  </header>
 
-    <footer>
-        <div id="footer-title">राधे राधे धन्यवाद</div>
-    </footer>
+  <div id="fullscreenContainer" class="fullscreen" onclick="closeFullscreen()">
+    <img id="fullscreenImage" src="" alt="Fullscreen Image">
+  </div>
 
-    <script src="script.js"></script>
+  <section>
+    <!-- Language switcher at the beginning of details -->
+    <div class="language-switcher">
+      <button class="language-btn hindi" onclick="setLanguage('hi')">Hindi</button>
+      <button class="language-btn english" onclick="setLanguage('en')">English</button>
+    </div>
+    
+    <h2 id="detailsHeader">Details</h2>
+    <div class="details">
+      <span id="occupationLabel">Occupation:</span>
+      <span id="occupationValue">SOFTWARE ENGINEER</span>
+    </div>
+    <div class="details">
+      <span>Company and Location:</span>
+      <span id="companyValue">RHOMBUZ DESIGN PVT LTD - BANGALORE(WORK FROM HOME)</span>
+    </div>
+    <div class="details">
+      <span id="dobLabel">DOB:</span>
+      <span id="dobValue">30/05/1997 - 07:56 PM (night)</span>
+    </div>
+    <div class="details">
+      <span>Address:</span>
+      <span>SAMAHAN MEJAROAD PRAYAGRAJ</span>
+    </div>
+    <div class="details">
+      <span>Education:</span>
+      <span>MBA-IT</span>
+    </div>
+    <div class="details">
+      <span>Father's Name:</span>
+      <span>AKHILESH KUMAR MISHRA</span>
+    </div>
+    <div class="details">
+      <span>Father's Occupation:</span>
+      <span>GOV JOB (POST OFFICE)</span>
+    </div>
+    <div class="details">
+      <span>Mother's Name:</span>
+      <span>SUNITA MISHRA</span>
+    </div>
+    <div class="details">
+      <span>Contact Details:</span>
+      <span>8707243312</span>
+    </div>
+    <div class="details">
+      <span>Siblings:</span>
+      <span>3 Sisters ( 2 married )</span>
+    </div>
+  </section>
+
+  <footer>
+    <h1>राधे राधे धन्यवाद</h1>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

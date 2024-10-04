@@ -121,11 +121,13 @@ footer {
 }
 
 .popup-content {
-  background-color: white;
-  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95); /* Lightly transparent for a softer look */
+  padding: 20px;
   text-align: center;
   border-radius: 10px;
-  width: 80%;
+  width: 80%; /* Make it 80% of the viewport width */
+  max-width: 600px; /* Limit the maximum width */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
 }
 
 /* Button Styles */
@@ -177,7 +179,7 @@ button:hover {
 /* Media Queries */
 @media (max-width: 768px) {
   .popup-content {
-    width: 90%; /* Make the popup wider on smaller screens */
+    width: 90%; /* Wider on smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
   }
 
@@ -189,7 +191,7 @@ button:hover {
 
 @media (max-width: 480px) {
   .popup-content {
-    width: 95%; /* Make the popup even wider on very small screens */
+    width: 95%; /* Make the popup wider on very small screens */
     padding: 15px; /* Further adjust padding */
   }
 

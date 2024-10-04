@@ -1,42 +1,58 @@
-<body>
-  <div id="languagePopup" class="popup">
-    <div class="popup-content">
-      <h2>Select Language</h2>
-      <button onclick="setLanguage('en')">English</button>
-      <button onclick="setLanguage('hi')">Hindi</button>
-    </div>
-  </div>
+// Function to open the fullscreen image
+function openFullscreen(element) {
+  var fullscreenContainer = document.getElementById('fullscreenContainer');
+  var fullscreenImage = document.getElementById('fullscreenImage');
 
-  <div id="mainContent">
-    <header>
-      <h1>ॐ श्री गणेशाय नम:</h1>
-      <div id="namePhotoContainer">
-        <img id="photo" src="img/user_photo.jpg" alt="Your Photo" onclick="openFullscreen(this)">
-        <img id="userPhoto" src="img/user_photo1.jpeg" alt="Your Photo1" onclick="openFullscreen(this)">
-      </div>
-      <h2>VIBHAV KUMAR MISHRA</h2>
-    </header>
-    
-    <section>
-      <h2 id="detailsHeader">Details</h2>
-      <div class="details">
-        <span id="occupationLabel">Occupation:</span>
-        <span>SOFTWARE ENGINEER</span>
-      </div>
-      <div class="details">
-        <span id="dobLabel">DOB:</span>
-        <span id="dobValue">30/05/1997 - 07:56 PM (night)</span>
-      </div>
-    </section>
+  fullscreenImage.src = element.src;
+  fullscreenContainer.style.display = 'flex';
+}
 
-    <footer>
-      <h1>राधे राधे धन्यवाद</h1>
-    </footer>
-  </div>
+// Function to close fullscreen image
+function closeFullscreen() {
+  var fullscreenContainer = document.getElementById('fullscreenContainer');
+  fullscreenContainer.style.display = 'none';
+}
 
-  <div id="fullscreenContainer" class="fullscreen" onclick="closeFullscreen()">
-    <img id="fullscreenImage" src="" alt="Fullscreen Image">
-  </div>
+// Set language and hide popup
+function setLanguage(language) {
+  const languagePopup = document.getElementById('languagePopup');
+  const mainContent = document.getElementById('mainContent');
+  
+  // Show content after language selection
+  languagePopup.style.display = 'none';
+  mainContent.style.filter = 'none';
 
-  <script src="script.js"></script>
-</body>
+  if (language === 'en') {
+    setEnglishText();
+  } else if (language === 'hi') {
+    setHindiText();
+  }
+}
+
+// Default language setup on page load
+window.onload = function() {
+  const languagePopup = document.getElementById('languagePopup');
+  const mainContent = document.getElementById('mainContent');
+
+  // Blur the main content until language is selected
+  mainContent.style.filter = 'blur(5px)';
+
+  // Show the language selection popup
+  languagePopup.style.display = 'flex';
+}
+
+// Set content for English
+function setEnglishText() {
+  document.getElementById('detailsHeader').innerText = 'Details';
+  document.getElementById('occupationLabel').innerText = 'Occupation:';
+  document.getElementById('dobLabel').innerText = 'DOB:';
+  document.getElementById('dobValue').innerText = '30/05/1997 - 07:56 PM (night)';
+}
+
+// Set content for Hindi
+function setHindiText() {
+  document.getElementById('detailsHeader').innerText = 'विवरण';
+  document.getElementById('occupationLabel').innerText = 'व्यवसाय:';
+  document.getElementById('dobLabel').innerText = 'जन्म तिथि:';
+  document.getElementById('dobValue').innerText = '30/05/1997 - 07:56 PM (रात)';
+}

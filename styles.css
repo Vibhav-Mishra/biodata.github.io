@@ -191,8 +191,8 @@ button:hover {
     padding: 15px; /* Adjust padding for smaller screens */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
     position: relative; /* Relative position for offset adjustments */
-    top: -40%; /* Shift up by 40% */
-    left: -30%; /* Shift left by 30% */
+    top: -30%; /* Shift up by 40% */
+    left: -20%; /* Shift left by 30% */
   }
 
   .language-btn {

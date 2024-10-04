@@ -121,13 +121,12 @@ footer {
 }
 
 .popup-content {
-  background-color: rgba(255, 255, 255, 0.95); /* Lightly transparent for a softer look */
-  padding: 20px;
+  background-color: white;
+  padding: 30px;
   text-align: center;
   border-radius: 10px;
-  width: 80%; /* Make it 80% of the viewport width */
-  max-width: 600px; /* Limit the maximum width */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+  width: 80%;
+  max-width: 600px; /* Limit maximum width */
 }
 
 /* Button Styles */
@@ -179,24 +178,19 @@ button:hover {
 /* Media Queries */
 @media (max-width: 768px) {
   .popup-content {
-    width: 90%; /* Wider on smaller screens */
+    width: 90%; /* Make it narrower on smaller screens */
     padding: 20px; /* Adjust padding for smaller screens */
-  }
-
-  .language-btn {
-    font-size: 14px; /* Adjust font size for buttons */
-    padding: 8px 12px; /* Adjust padding for buttons */
   }
 }
 
 @media (max-width: 480px) {
   .popup-content {
-    width: 95%; /* Make the popup wider on very small screens */
+    width: 85%; /* Slightly wider on very small screens */
     padding: 15px; /* Further adjust padding */
   }
 
   .language-btn {
-    font-size: 12px; /* Further reduce button font size */
-    padding: 6px 10px; /* Further adjust padding */
+    font-size: 14px; /* Adjust font size for buttons */
+    padding: 8px 12px; /* Adjust padding for buttons */
   }
 }

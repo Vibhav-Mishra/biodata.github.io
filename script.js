@@ -8,7 +8,7 @@ const translations = {
     companyLabel: "Company and Location:",
     companyValue: "RHOMBUZ DESIGN PVT LTD - BANGALORE(WORK FROM HOME)",
     dobLabel: "DOB:",
-    dobValue: "30/05/1997",
+    dobValue: "30/05/1997 - 07:56 PM (night)",
     addressLabel: "Address:",
     addressValue: "SAMAHAN MEJAROAD PRAYAGRAJ",
     educationLabel: "Education:",
@@ -55,10 +55,28 @@ const translations = {
 
 let currentLanguage = "en";
 
+// Set language and hide popup
+function setLanguage(language) {
+  const languagePopup = document.getElementById('languagePopup');
+  const mainContent = document.getElementById('mainContent');
+  
+  // Hide popup and remove blur on content
+  languagePopup.style.display = 'none';
+  mainContent.style.filter = 'none';
+
+  currentLanguage = language;
+  updateContent();
+}
+
+// Function to toggle language
 function toggleLanguage() {
   currentLanguage = currentLanguage === "en" ? "hi" : "en";
   document.getElementById("languageToggle").innerText = currentLanguage === "en" ? "View in Hindi" : "View in English";
+  updateContent();
+}
 
+// Update the content based on the current language
+function updateContent() {
   const content = translations[currentLanguage];
   document.getElementById("header-title").innerText = content.headerTitle;
   document.getElementById("name").innerText = content.name;
@@ -84,4 +102,19 @@ function toggleLanguage() {
   document.getElementById("siblings-label").innerText = content.siblingsLabel;
   document.getElementById("siblings-value").innerText = content.siblingsValue;
   document.getElementById("footer-title").innerText = content.footerTitle;
+}
+
+// Default language setup on page load
+window.onload = function() {
+  const languagePopup = document.getElementById('languagePopup');
+  const mainContent = document.getElementById('mainContent');
+
+  // Blur the main content until language is selected
+  mainContent.style.filter = 'blur(5px)';
+
+  // Show the language selection popup
+  languagePopup.style.display = 'flex';
+
+  // Initialize content
+  updateContent();
 }

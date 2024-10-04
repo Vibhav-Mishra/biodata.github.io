@@ -19,12 +19,12 @@
   </div>
 
   <header id="mainContent">
-    <h1>ॐ श्री गणेशाय नम:</h1>
+    <h1 id="header-title">ॐ श्री गणेशाय नम:</h1>
     <div id="namePhotoContainer">
       <img id="photo" src="img/user_photo.jpg" alt="Your Photo" onclick="openFullscreen(this)">
       <img id="userPhoto" src="img/user_photo1.jpeg" alt="Your Photo1" onclick="openFullscreen(this)">
     </div>
-    <h2>VIBHAV KUMAR MISHRA</h2>
+    <h2 id="name">VIBHAV KUMAR MISHRA</h2>
   </header>
 
   <div id="fullscreenContainer" class="fullscreen" onclick="closeFullscreen()">
@@ -33,8 +33,8 @@
 
   <section>
     <!-- Language switcher at the beginning of details -->
-    <div class="language-switcher">
-      <button class="language-btn hindi" onclick="setLanguage('hi')">Hindi</button>
+    <div id="languageToggleContainer">
+      <button id="languageToggle" class="language-btn hindi" onclick="setLanguage('hi')">Hindi</button>
       <button class="language-btn english" onclick="setLanguage('en')">English</button>
     </div>
     
@@ -44,7 +44,7 @@
       <span id="occupationValue">SOFTWARE ENGINEER</span>
     </div>
     <div class="details">
-      <span>Company and Location:</span>
+      <span id="companyLabel">Company and Location:</span>
       <span id="companyValue">RHOMBUZ DESIGN PVT LTD - BANGALORE(WORK FROM HOME)</span>
     </div>
     <div class="details">
@@ -52,39 +52,42 @@
       <span id="dobValue">30/05/1997 - 07:56 PM (night)</span>
     </div>
     <div class="details">
-      <span>Address:</span>
-      <span>SAMAHAN MEJAROAD PRAYAGRAJ</span>
+      <span id="addressLabel">Address:</span>
+      <span id="addressValue">SAMAHAN MEJAROAD PRAYAGRAJ</span>
     </div>
     <div class="details">
-      <span>Education:</span>
-      <span>MBA-IT</span>
+      <span id="educationLabel">Education:</span>
+      <span id="educationValue">MBA-IT</span>
     </div>
     <div class="details">
-      <span>Father's Name:</span>
-      <span>AKHILESH KUMAR MISHRA</span>
+      <span id="fatherNameLabel">Father's Name:</span>
+      <span id="fatherNameValue">AKHILESH KUMAR MISHRA</span>
     </div>
     <div class="details">
-      <span>Father's Occupation:</span>
-      <span>GOV JOB (POST OFFICE)</span>
+      <span id="fatherOccupationLabel">Father's Occupation:</span>
+      <span id="fatherOccupationValue">GOV JOB (POST OFFICE)</span>
     </div>
     <div class="details">
-      <span>Mother's Name:</span>
-      <span>SUNITA MISHRA</span>
+      <span id="motherNameLabel">Mother's Name:</span>
+      <span id="motherNameValue">SUNITA MISHRA</span>
     </div>
     <div class="details">
-      <span>Contact Details:</span>
-      <span>8707243312</span>
+      <span id="contactDetailsLabel">Contact Details:</span>
+      <span id="contactDetailsValue">8707243312</span>
     </div>
     <div class="details">
-      <span>Siblings:</span>
-      <span>3 Sisters ( 2 married )</span>
+      <span id="siblingsLabel">Siblings:</span>
+      <span id="siblingsValue">3 Sisters (2 married)</span>
     </div>
   </section>
 
   <footer>
-    <h1>राधे राधे धन्यवाद</h1>
+    <h1 id="footer-title">राधे राधे धन्यवाद</h1>
   </footer>
 
-  <script src="script.js"></script>
+  <div id="fullscreenContainer" class="fullscreen" onclick="closeFullscreen()">
+    <img id="fullscreenImage" src="" alt="Fullscreen Image">
+  </div>
+
 </body>
 </html>

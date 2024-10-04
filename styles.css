@@ -1,18 +1,18 @@
-/* General Styles */
+/* General styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('img/background_image.jpg'); /* Replace with your background image */
+  background-image: url('img/background_image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-header, section, footer {
+header {
   text-align: center;
   padding: 20px;
-  backdrop-filter: blur(2px); /* Adjust the blur value as needed */
+  backdrop-filter: blur(2px);
   position: relative;
 }
 
@@ -35,7 +35,7 @@ header, section, footer {
 h1 {
   color: #333;
   white-space: nowrap;
-  font-family: "DejaVu Sans", "Times New Roman";
+  font-family:"DejaVu Sans","Times New Roman";
   animation: moveLeftToRight 12s linear infinite;
   overflow: hidden;
 }
@@ -49,6 +49,7 @@ h2 {
   text-shadow: 1px 1px 2px rgba(58, 58, 58, 0.961);
 }
 
+/* Section Styles */
 section {
   margin: 20px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -84,6 +85,7 @@ footer {
   backdrop-filter: blur(2px);
 }
 
+/* Fullscreen Image */
 .fullscreen {
   position: fixed;
   top: 0;
@@ -104,65 +106,71 @@ footer {
   border-radius: 10px;
 }
 
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 18px;
-  cursor: pointer;
-  color: #333;
-}
-
-@keyframes moveLeftToRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-/* Modal Styles */
-.modal {
+/* Language Popup */
+.popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  display: none;
 }
 
-.modal-content {
+.popup-content {
   background-color: white;
   padding: 30px;
+  text-align: center;
   border-radius: 10px;
   width: 80%;
-  max-width: 400px;
-  text-align: center;
 }
 
-.lang-button {
+button {
   padding: 10px 20px;
   margin: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
+  font-size: 18px;
   border-radius: 5px;
-  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.language-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hindi {
+  background-color: green;
   color: white;
-  transition: background-color 0.3s;
 }
 
-.lang-button:hover {
-  background-color: #45a049;
+.english {
+  background-color: red;
+  color: white;
 }
 
-/* Blur Effect */
-.blur {
-  filter: blur(5px);
-  transition: filter 0.3s;
+/* Animation */
+@keyframes moveLeftToRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }

@@ -192,7 +192,7 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
     position: relative; /* Relative position for offset adjustments */
     top: -25%; /* Shift up by 40% */
-    left: -22%; /* Shift left by 30% */
+    left: -23%; /* Shift left by 30% */
   }
 
   .language-btn {

@@ -1,4 +1,3 @@
-/* General styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -49,7 +48,6 @@ h2 {
   text-shadow: 1px 1px 2px rgba(58, 58, 58, 0.961);
 }
 
-/* Section Styles */
 section {
   margin: 20px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -85,7 +83,6 @@ footer {
   backdrop-filter: blur(2px);
 }
 
-/* Fullscreen Image */
 .fullscreen {
   position: fixed;
   top: 0;
@@ -106,7 +103,15 @@ footer {
   border-radius: 10px;
 }
 
-/* Language Popup */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+}
+
 .popup {
   position: fixed;
   top: 0;
@@ -133,44 +138,5 @@ button {
   padding: 10px 20px;
   margin: 10px;
   font-size: 18px;
-  border-radius: 5px;
   cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Language Switcher Styles */
-.language-switcher {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  background-color: black;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.language-btn {
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.hindi {
-  background-color: green;
-  color: white;
-}
-
-.english {
-  background-color: red;
-  color: white;
-}
-
-/* Animation */
-@keyframes moveLeftToRight {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
 }

@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -8,7 +9,7 @@ body {
   background-position: center;
 }
 
-header {
+header, section, footer {
   text-align: center;
   padding: 20px;
   backdrop-filter: blur(2px); /* Adjust the blur value as needed */
@@ -34,7 +35,7 @@ header {
 h1 {
   color: #333;
   white-space: nowrap;
-  font-family:"DejaVu Sans","Times New Roman";
+  font-family: "DejaVu Sans", "Times New Roman";
   animation: moveLeftToRight 12s linear infinite;
   overflow: hidden;
 }
@@ -119,4 +120,49 @@ footer {
   100% {
     transform: translateX(100%);
   }
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.lang-button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.lang-button:hover {
+  background-color: #45a049;
+}
+
+/* Blur Effect */
+.blur {
+  filter: blur(5px);
+  transition: filter 0.3s;
 }
